@@ -15,26 +15,26 @@ def hello():
 def sms_reply():
 
     # Fetch the message sent by the user
-    m_cont = request.form.get("Body").lower()
+    msg_in = request.form.get("Body").lower()
 
     # # INTELLIGENT BOT # #
     # # Reply to the message
-    m_resp = MessagingResponse()
-    if m_cont == 'hello':
-        # m_resp.message("Hello to you too. How are you?")
-        m_resp.message().body("Hello to you too. How are you?")
-    elif m_cont == 'random number':
-        m_resp.message().body("A random number for you is " + str(random.randint(0, 100)) + ".")
-        m_resp.message().media('https://bit.ly/3hf3oEx')
+    msg_out = MessagingResponse()
+    if msg_in == 'hello':
+        # msg_out.message("Hello to you too. How are you?")
+        msg_out.message().body("Hello to you too. How are you?")
+    elif msg_in == 'random number':
+        msg_out.message().body("A random number for you is " + str(random.randint(0, 100)) + ".")
+        msg_out.message().media('https://bit.ly/3hf3oEx')
     else:
-        m_resp.message().body("You have asked me to do something which is beyond my capabilities at the moment.")
+        msg_out.message().body("You have asked me to do something which is beyond my capabilities at the moment.")
 
     # # ECHO BOT # #
     # # Reply to the message
-    # m_resp = MessagingResponse()
-    # m_resp.message().body("You said: {}".format(m_cont))
+    # msg_out = MessagingResponse()
+    # msg_out.message().body("You said: {}".format(msg_in))
 
-    return str(m_resp)
+    return str(msg_out)
 
 
 if __name__ == "__main__":

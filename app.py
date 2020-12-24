@@ -19,14 +19,18 @@ def sms_reply():
 
     # # INTELLIGENT BOT # #
     # # Reply to the message
+    responded = False
     msg_out = MessagingResponse()
-    if msg_in == 'hello':
+    if 'hello' in msg_in:
         # msg_out.message("Hello to you too. How are you?")
         msg_out.message().body("Hello to you too. How are you?")
-    elif msg_in == 'random number':
+        responded = True
+    if 'random number' in msg_in:
+        # we can't use 'elif' here since it only checks if first condition isn't satisfied
         msg_out.message().body("A random number for you is " + str(random.randint(0, 100)) + ".")
         msg_out.message().media('https://bit.ly/3hf3oEx')
-    else:
+        responded = True
+    if not responded:
         msg_out.message().body("You have asked me to do something which is beyond my capabilities at the moment.")
 
     # # ECHO BOT # #

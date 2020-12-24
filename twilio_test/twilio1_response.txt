@@ -1,0 +1,26 @@
+# Response #
+
+{
+    "sid": "SMb9948f19329343c1b9b3ab4bea0388a8",
+    "date_created": "Wed, 23 Dec 2020 19:51:11 +0000",
+    "date_updated": "Wed, 23 Dec 2020 19:51:11 +0000",
+    "date_sent": null,
+    "account_sid": "ACd438cd43a6cbd146c97c5fb92615df4f",
+    "to": "whatsapp:+919044099200",
+    "from": "whatsapp:+14155238886",
+    "messaging_service_sid": null,
+    "body": "Your Verdis AI order of 1 smart solution has shipped and should be delivered on July 10, 2019. Details: vpractice.ai/",
+    "status": "queued",
+    "num_segments": "1",
+    "num_media": "0",
+    "direction": "outbound-api",
+    "api_version": "2010-04-01",
+    "price": null,
+    "price_unit": null,
+    "error_code": null,
+    "error_message": null,
+    "uri": "/2010-04-01/Accounts/ACd438cd43a6cbd146c97c5fb92615df4f/Messages/SMb9948f19329343c1b9b3ab4bea0388a8.json",
+    "subresource_uris": {
+        "media": "/2010-04-01/Accounts/ACd438cd43a6cbd146c97c5fb92615df4f/Messages/SMb9948f19329343c1b9b3ab4bea0388a8/Media.json"
+    }
+}

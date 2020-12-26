@@ -2,11 +2,14 @@
 
 # first, 'pip3 install twilio'
 from twilio.rest import Client
+import config
 
-# this needs to be exported
-account_sid = 'ACd438cd43a6cbd146c97c5fb92615df4f'
-# this needs to be exported
-auth_token = 'ceb90e924ce88f05715c4154ec758549'
+# account_sid needs to be exported in the env using the following command
+# export account_sid=abcdef
+account_sid = config.account_sid
+# auth_token needs to be exported in the env using the following command
+# export auth_token=lmnopq
+auth_token = config.auth_token
 
 client = Client(account_sid, auth_token)
 

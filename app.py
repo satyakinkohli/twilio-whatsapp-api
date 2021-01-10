@@ -19,7 +19,7 @@ def sms_reply():
 
     conn = sqlite3.connect('customers.sqlite')
     cur = conn.cursor()
-    cur.execute('CREATE TABLE IF NOT EXISTS contacts (number VARCHAR)')
+    cur.execute('CREATE TABLE IF NOT EXISTS contacts (id INTEGER PRIMARY KEY AUTOINCREMENT, number VARCHAR)')
     cur.execute('INSERT INTO contacts (number) values (?)', (ph_no,))
     conn.commit()
     conn.close()

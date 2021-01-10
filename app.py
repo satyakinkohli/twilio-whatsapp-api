@@ -1,6 +1,6 @@
 from flask import Flask, request
 from twilio.twiml.messaging_response import MessagingResponse
-
+import sqlite3
 import random
 
 app = Flask(__name__)
@@ -13,6 +13,16 @@ def hello():
 
 @app.route("/sms", methods=["POST"])
 def sms_reply():
+
+    # Fetch details of the user
+    ph_no = request.form.get("From")
+
+    conn = sqlite3.connect('customers.sqlite')
+    cur = conn.cursor()
+    cur.execute('CREATE TABLE IF NOT EXISTS contacts (number VARCHAR)')
+    cur.execute('INSERT INTO contacts (number) values (?)', (ph_no,))
+    conn.commit()
+    conn.close()
 
     # Fetch the message sent by the user
     msg_in = request.form.get("Body").lower()

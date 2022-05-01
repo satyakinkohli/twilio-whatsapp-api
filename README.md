@@ -1,4 +1,4 @@
-# twilio-whatsApp-api
+# twilio-whatsapp-api
 
 WhatsApp Chatbot made using the Twilio WhatsApp API.
 

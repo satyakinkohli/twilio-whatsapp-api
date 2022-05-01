@@ -2,3 +2,5 @@ venv/
 *.pyc
 config.py
 customers.sqlite
+__pycache__/
+.idea/
